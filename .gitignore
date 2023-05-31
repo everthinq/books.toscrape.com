@@ -1,4 +1,6 @@
 .DS_Store
 .idea/
+*.pyc
+__pycache__/
 books.json
 read_json.py
