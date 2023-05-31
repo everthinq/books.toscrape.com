@@ -1,7 +1,7 @@
 import scrapy
 
 
-class BooksSpiderSpider(scrapy.Spider):
+class BooksSpider(scrapy.Spider):
     name = "books_spider"
     allowed_domains = ["books.toscrape.com"]
     start_urls = ["https://books.toscrape.com/catalogue/page-1.html"]
@@ -18,6 +18,8 @@ class BooksSpiderSpider(scrapy.Spider):
             yield response.follow(next_page, callback=self.parse)
 
     def parse_book_page(self, response):
+        book = response.css("div.product_main")[0]
+        table_rows = response.css("table tr")
         yield {
             "href": response.request.url,
             "title": response.css("h1::text").get(),
