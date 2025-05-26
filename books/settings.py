@@ -7,6 +7,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
+LOG_ENABLED = True
+LOG_LEVEL = 'DEBUG'  # 'INFO', 'DEBUG', 'WARNING', 'ERROR', 'CRITICAL'
+LOG_FILE = 'bookscraper.log'  # Optional: save logs to a file
+
 BOT_NAME = "books"
 
 SPIDER_MODULES = ["books.spiders"]
