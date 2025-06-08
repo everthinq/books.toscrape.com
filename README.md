@@ -12,19 +12,16 @@ Scrape all book listings from the site, extracting details such as title, price,
 ## Installation
 1. Clone the repository:
     ```sh 
-    git clone https://github.com/Lando-Scraping/ClaudeAI_LocationExtractor.git
+    git clone https://github.com/everthinq/books.toscrape.com.git
    ```
-2. Install the required dependencies:
-    ```sh 
-    pip install -r requirements.txt
-   ```
+2. Install docker: https://www.docker.com/
 ------------------------------------------------------
 ## How to run
-1. Go to the project directory:
+1. Go to the project directory, for example:
    ```sh 
    cd ~/Projects/Scrapy/books
    ```
 2. Run this to get json file:
    ```sh 
-   scrapy crawl books_spider -o books.json  
+   docker compose up
    ```

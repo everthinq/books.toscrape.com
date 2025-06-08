@@ -1,0 +1,9 @@
+services:
+  app:
+    container_name: fastapi-books-toscrape
+    image: fastapi-books-toscrape
+    build: .
+    command: uvicorn fast_api.main:app --host 0.0.0.0 --port 8080 --reload
+    working_dir: /usr/src/app
+    ports:
+      - 8080:8080
